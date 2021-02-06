@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background: red;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial;
+  color: white;
+}
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px auto;
+  width: 400px;
+  border: 1px solid black;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.healthbar {
+  margin: 5px auto;
+  width: 300px;
+  border: 1px solid;
+  height: 30px;
+}
+
+.healthbar__value {
+  background: green;
+  width: 100%;
+  height: inherit;
+}
+
+#controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #88005b;
+  background-color: #88005b;
+  color: white;
+  padding: 1rem;
+  border-radius: 1px;
+  margin: 1rem;
+  width: 12rem;
+  box-shadow: 1px 1px 4px rgb(red, green, blue);
+}
