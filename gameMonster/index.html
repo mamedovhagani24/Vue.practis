@@ -37,7 +37,8 @@
 
       <div id="controls">
         <button @click="attackMonster">ATTACK</button>
-        <button>SPECIAL ATTACK</button>
+        <button :disabled='currentRound % 3 !== 0' @click="specialAttackMonster" >SPECIAL ATTACK</button>
+        </button>
         <button>REAL</button>
         <button>SURRENDER</button>
       </div>
