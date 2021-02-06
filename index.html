@@ -18,33 +18,34 @@
       <h1>Monster Slayer</h1>
     </header>
 
-    <div id="id" class="container">
-      <h2>Monster Health</h2>
+    <div id="game">
+      <section id="monster" class="container">
+        <h2>Monster Healthy</h2>
 
-      <div class="healthbar">
-        <div class="healthbar__value"></div>
+        <div class="healthbar">
+          <div class="healthbar__value"></div>
+        </div>
+      </section>
+
+      <section id="player" class="container">
+        <h2>Your Healthy</h2>
+
+        <div class="healthbar">
+          <div class="healthbar__value"></div>
+        </div>
+      </section>
+
+      <div id="controls">
+        <button @click="attackMonster">ATTACK</button>
+        <button>SPECIAL ATTACK</button>
+        <button>REAL</button>
+        <button>SURRENDER</button>
       </div>
+
+      <section id="log" class="container">
+        <h2>Battle Log</h2>
+      </section>
     </div>
-
-    <section id="player" class="container">
-      <h2>Your Health</h2>
-
-      <div class="healthbar">
-        <div class="healthbar__value"></div>
-      </div>
-    </section>
-
-    <section id="controls">
-      <button>ATTACK</button>
-      <button>SPECIAL ATTACK</button>
-      <button>REAL</button>
-      <button>SURRENDER</button>
-    </section>
-
-    <section id="log" class="container">
-      <h2>Battle Log</h2>
-      <ul></ul>
-    </section>
 
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>
