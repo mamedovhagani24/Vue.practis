@@ -35,16 +35,38 @@
         </div>
       </section>
 
-      <div id="controls">
+      <div class="container" v-if='winner'>
+        <h2>Game Over!</h2>
+
+        <h3 v-if="winner === 'lost'">Your Lost!</h3>
+        <h3 v-else-if="winner === 'winner'">Your won!</h3>
+        <h3 v-else-if="winner === 'draw'">it is a draw!</h3>
+
+        <button @click='startGame'>Start new Game</button>
+      </div>
+
+
+      <section id="controls" v-else>
         <button @click="attackMonster">ATTACK</button>
         <button :disabled='mayUseSpecialAttack' @click="specialAttackMonster" >SPECIAL ATTACK</button>
         </button>
         <button @click='healPlayer'>HEAL</button>
-        <button>SURRENDER</button>
-      </div>
+        <button @click='surrender'>SURRENDER</button>
+      </section>
 
+      
       <section id="log" class="container">
         <h2>Battle Log</h2>
+
+        <ul>
+          <li v-for="logMessage in logMessage">
+            <span
+            :class="{ 'log-player': logMessage.actionBy == 'player', 'log-monster': logMessage == 'monster' }"> {{ logMessage.actionBy === 'player' ? 'Player' : 'Monster' }} </span>
+            <span v-if="logMessage.actionType == 'heal'">Player is Heal himself for <span class="log-heal">{{ logMessage.actionValue }}</span></span>
+            <span v-else> attacks and deals <span class="log-damage">{{ logMessage.actionValue }}</span></span>
+          </li>
+
+        </ul>
       </section>
     </div>
 

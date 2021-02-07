@@ -21,6 +21,9 @@ h1 {
   border: 1px solid black;
   padding: 10px 0px;
   text-align: center;
+  box-shadow: 0px 1px 5px 0px #b2b0b1, -4px -2px 5px 0px #aeaebf,
+    5px -5px 5px 0px #bcb7bf;
+  border-radius: 10px;
 }
 
 .healthbar {
@@ -56,4 +59,18 @@ button {
   box-shadow: 1px 1px 4px rgb(red, green, blue);
 }
 
+ul {
+  list-style: none;
+}
 
+.log-heal {
+  color: green;
+}
+
+.log-player {
+  color: purple;
+}
+
+.log-monster {
+  color: orange;
+}
